@@ -1,129 +1,56 @@
-# Byte-compiled / optimized / DLL files
+# 以'#'开始的行，被视为注释
+# 以斜杠'/'开头表示目录；
+# 以星号'*'通配多个字符；
+# 以问号'?'通配单个字符；
+# 以方括号'[]'包含单个字符的匹配列表；
+# 以叹号'!'表示不忽略(跟踪)匹配到的文件或目录；
+# git 对于 .gitignore配置文件是按行从上到下进行规则匹配的，意味着如果前面的规则匹配的范围更大，则后面的规则将不会生效
+
+# 1. 忽略掉所有文件名是 foo.txt的文件
+#foo.txt
+
+# 2. 忽略所有生成的 html文件
+#*.html
+
+# 3. foo.html是手工维护的，所以例外
+#!foo.html
+
+# 4. 忽略所有.o和 .a文件
+#*.[oa]
+
+# 5. 屏蔽logs目录
+#logs/
+
+# 6. 屏蔽logs目录下所有文件，但不屏蔽logs目录
+#logs/*
+
+# 7. 只屏蔽仓库根目录下的log.log文件，其他目录下的不屏蔽
+#/log.log
+
+
+#---------------------------------------------------
+# 各IDE配置
+.idea/
+.vs/
+.vscode/
+*.iml
+
+# vim配置
+*.tags
+*.tag
+
+# Python开发
 __pycache__/
-*.py[cod]
-*$py.class
+venv/
 
-# C extensions
-*.so
-
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-pip-wheel-metadata/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
-
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
-
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
-
-# Translations
-*.mo
-*.pot
-
-# Django stuff:
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
-
-# Flask stuff:
-instance/
-.webassets-cache
-
-# Scrapy stuff:
-.scrapy
-
-# Sphinx documentation
-docs/_build/
-
-# PyBuilder
+# Java/Scala开发
 target/
 
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# IPython
-profile_default/
-ipython_config.py
-
-# pyenv
-.python-version
-
-# pipenv
-#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
-#   However, in case of collaboration, if having platform-specific dependencies or dependencies
-#   having no cross-platform support, pipenv may install dependencies that don't work, or not
-#   install all needed dependencies.
-#Pipfile.lock
-
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow
-__pypackages__/
-
-# Celery stuff
-celerybeat-schedule
-celerybeat.pid
-
-# SageMath parsed files
-*.sage.py
-
-# Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-
-# Spyder project settings
-.spyderproject
-.spyproject
-
-# Rope project settings
-.ropeproject
-
-# mkdocs documentation
-/site
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pyre type checker
-.pyre/
+# 日志文件
+*.log
+.log/
+__log__/
+log/
+.logs/
+__logs__/
+logs/
